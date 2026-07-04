@@ -1,0 +1,9 @@
+# Godot
+.godot/
+.import/
+
+# macOS
+.DS_Store
+
+# Mono/C# (only if you're using C#)
+.mono/

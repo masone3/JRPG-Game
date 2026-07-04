@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dtt4uvwk1e67l"]
+
+[ext_resource type="Theme" uid="uid://cetxk8mn7ikl2" path="res://default_theme.tres" id="1_oxp8w"]
+[ext_resource type="PackedScene" uid="uid://bq2orrl7j8ebj" path="res://UIWindow.tscn" id="2_7sfm4"]
+
+[node name="Battle" type="Control" unique_id=869240570]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_oxp8w")
+
+[node name="Bottom" type="HBoxContainer" parent="." unique_id=1265841313]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="MainCharacter" parent="Bottom" unique_id=413180026 instance=ExtResource("2_7sfm4")]
+layout_mode = 2
+
+[node name="2ndPartyMemb" parent="Bottom" unique_id=1778239178 instance=ExtResource("2_7sfm4")]
+layout_mode = 2
+
+[node name="3rdPartyMemb" parent="Bottom" unique_id=648002316 instance=ExtResource("2_7sfm4")]
+layout_mode = 2
+
+[node name="4thPartyMemb" parent="Bottom" unique_id=1952626258 instance=ExtResource("2_7sfm4")]
+layout_mode = 2
