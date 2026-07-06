@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://dtt4uvwk1e67l"]
 
 [ext_resource type="Theme" uid="uid://cetxk8mn7ikl2" path="res://default_theme.tres" id="1_oxp8w"]
+[ext_resource type="Script" uid="uid://dkmjshnqumgxu" path="res://battle.gd" id="2_6t8i5"]
 [ext_resource type="PackedScene" uid="uid://bq2orrl7j8ebj" path="res://UIWindow.tscn" id="2_7sfm4"]
+[ext_resource type="Script" uid="uid://c3r6cs3fby6i2" path="res://options.gd" id="4_dw4jg"]
+[ext_resource type="Texture2D" uid="uid://61mjyxpuwir6" path="res://Slime.png" id="5_0npn6"]
 
 [node name="Battle" type="Control" unique_id=869240570]
 layout_mode = 3
@@ -11,6 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_oxp8w")
+script = ExtResource("2_6t8i5")
 
 [node name="Options" parent="." unique_id=413180026 instance=ExtResource("2_7sfm4")]
 layout_mode = 0
@@ -18,7 +22,7 @@ offset_top = 232.0
 offset_right = 157.0
 offset_bottom = 296.0
 
-[node name="MarginContainer" type="MarginContainer" parent="Options" unique_id=1227186714]
+[node name="Margin" type="MarginContainer" parent="Options" unique_id=1227186714]
 layout_mode = 0
 offset_right = 157.0
 offset_bottom = 64.0
@@ -27,20 +31,21 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Options/MarginContainer" unique_id=65389275]
+[node name="Options" type="VBoxContainer" parent="Options/Margin" unique_id=65389275]
 layout_mode = 2
+script = ExtResource("4_dw4jg")
 
-[node name="PhysicalAttack" type="Button" parent="Options/MarginContainer/VBoxContainer" unique_id=369816654]
+[node name="PhysicalAttack" type="Button" parent="Options/Margin/Options" unique_id=369816654]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Physical Attack"
 
-[node name="UseItem" type="Button" parent="Options/MarginContainer/VBoxContainer" unique_id=471853361]
+[node name="UseItem" type="Button" parent="Options/Margin/Options" unique_id=471853361]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Use Item"
 
-[node name="Retreat" type="Button" parent="Options/MarginContainer/VBoxContainer" unique_id=657323138]
+[node name="Retreat" type="Button" parent="Options/Margin/Options" unique_id=657323138]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Attempt Retreat"
@@ -69,14 +74,25 @@ layout_mode = 2
 [node name="4thPartyMemb" parent="Bottom" unique_id=1952626258 instance=ExtResource("2_7sfm4")]
 layout_mode = 2
 
-[node name="Control" type="Control" parent="." unique_id=27918795]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Enemies" type="Control" parent="." unique_id=27918795]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 294.0
+grow_horizontal = 2
 
-[node name="TextureButton" type="TextureButton" parent="Control" unique_id=700788993]
-layout_mode = 0
-offset_left = 550.0
-offset_top = 70.0
-offset_right = 590.0
-offset_bottom = 110.0
+[node name="TextureButton" type="TextureButton" parent="Enemies" unique_id=700788993]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -43.0
+offset_right = -31.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+texture_normal = ExtResource("5_0npn6")

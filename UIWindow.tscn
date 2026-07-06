@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bq2orrl7j8ebj"]
 
 [ext_resource type="Texture2D" uid="uid://ckn6jnb8fb162" path="res://UI/Borders.svg" id="1_cu2nq"]
+[ext_resource type="Script" uid="uid://5s2xjyhsse16" path="res://ui_window.gd" id="2_wt3b1"]
 
-[node name="NinePatchRect" type="NinePatchRect" unique_id=413180026]
+[node name="UI_Window" type="NinePatchRect" unique_id=413180026]
 size_flags_horizontal = 3
 texture = ExtResource("1_cu2nq")
 region_rect = Rect2(268, 664, 128, 128)
@@ -10,3 +11,4 @@ patch_margin_left = 32
 patch_margin_top = 32
 patch_margin_right = 32
 patch_margin_bottom = 32
+script = ExtResource("2_wt3b1")
