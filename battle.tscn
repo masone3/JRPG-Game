@@ -12,6 +12,39 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_oxp8w")
 
+[node name="Options" parent="." unique_id=413180026 instance=ExtResource("2_7sfm4")]
+layout_mode = 0
+offset_top = 232.0
+offset_right = 157.0
+offset_bottom = 296.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Options" unique_id=1227186714]
+layout_mode = 0
+offset_right = 157.0
+offset_bottom = 64.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options/MarginContainer" unique_id=65389275]
+layout_mode = 2
+
+[node name="PhysicalAttack" type="Button" parent="Options/MarginContainer/VBoxContainer" unique_id=369816654]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Physical Attack"
+
+[node name="UseItem" type="Button" parent="Options/MarginContainer/VBoxContainer" unique_id=471853361]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Use Item"
+
+[node name="Retreat" type="Button" parent="Options/MarginContainer/VBoxContainer" unique_id=657323138]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Attempt Retreat"
+
 [node name="Bottom" type="HBoxContainer" parent="." unique_id=1265841313]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 1
@@ -24,7 +57,7 @@ grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 
-[node name="MainCharacter" parent="Bottom" unique_id=413180026 instance=ExtResource("2_7sfm4")]
+[node name="MainCharacter" parent="Bottom" unique_id=1133470705 instance=ExtResource("2_7sfm4")]
 layout_mode = 2
 
 [node name="2ndPartyMemb" parent="Bottom" unique_id=1778239178 instance=ExtResource("2_7sfm4")]
@@ -35,3 +68,15 @@ layout_mode = 2
 
 [node name="4thPartyMemb" parent="Bottom" unique_id=1952626258 instance=ExtResource("2_7sfm4")]
 layout_mode = 2
+
+[node name="Control" type="Control" parent="." unique_id=27918795]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton" type="TextureButton" parent="Control" unique_id=700788993]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 70.0
+offset_right = 590.0
+offset_bottom = 110.0
