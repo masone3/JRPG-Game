@@ -16,6 +16,15 @@ grow_vertical = 2
 theme = ExtResource("1_oxp8w")
 script = ExtResource("2_6t8i5")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1550019568]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(3.549643e-07, 0.2224187, 0.17532101, 1)
+
 [node name="Options" parent="." unique_id=413180026 instance=ExtResource("2_7sfm4")]
 layout_mode = 0
 offset_top = 232.0
@@ -38,16 +47,20 @@ script = ExtResource("4_dw4jg")
 [node name="PhysicalAttack" type="Button" parent="Options/Margin/Options" unique_id=369816654]
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_bottom = NodePath("../UseItem")
 text = "Physical Attack"
 
 [node name="UseItem" type="Button" parent="Options/Margin/Options" unique_id=471853361]
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_top = NodePath("../PhysicalAttack")
+focus_neighbor_bottom = NodePath("../Retreat")
 text = "Use Item"
 
 [node name="Retreat" type="Button" parent="Options/Margin/Options" unique_id=657323138]
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_top = NodePath("../UseItem")
 text = "Attempt Retreat"
 
 [node name="Bottom" type="HBoxContainer" parent="." unique_id=1265841313]
