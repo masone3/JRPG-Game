@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dtt4uvwk1e67l"]
 
 [ext_resource type="Theme" uid="uid://cetxk8mn7ikl2" path="res://default_theme.tres" id="1_oxp8w"]
-[ext_resource type="Script" uid="uid://dkmjshnqumgxu" path="res://battle.gd" id="2_6t8i5"]
+[ext_resource type="Script" uid="uid://dkmjshnqumgxu" path="res://Scripts/battle.gd" id="2_6t8i5"]
 [ext_resource type="PackedScene" uid="uid://bq2orrl7j8ebj" path="res://UIWindow.tscn" id="2_7sfm4"]
-[ext_resource type="Script" uid="uid://c3r6cs3fby6i2" path="res://options.gd" id="4_dw4jg"]
-[ext_resource type="Texture2D" uid="uid://61mjyxpuwir6" path="res://Slime.png" id="5_0npn6"]
+[ext_resource type="Script" uid="uid://c3r6cs3fby6i2" path="res://Scripts/menu.gd" id="4_dw4jg"]
+[ext_resource type="Texture2D" uid="uid://61mjyxpuwir6" path="res://Enemy Sprites/Slime.png" id="5_0npn6"]
 
 [node name="Battle" type="Control" unique_id=869240570]
 layout_mode = 3
